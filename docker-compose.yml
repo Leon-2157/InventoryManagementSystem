@@ -1,0 +1,37 @@
+services:
+  web:
+    build: ./docker/php
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html:Z
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_NAME: inventory
+      DB_USER: inventory_user
+      DB_PASS: inventory_pass
+
+  db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root_pass
+      MYSQL_DATABASE: inventory
+      MYSQL_USER: inventory_user
+      MYSQL_PASSWORD: inventory_pass
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:z
+      - ./database/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:z
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot_pass"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  db_data:

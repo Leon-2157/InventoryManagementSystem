@@ -1,0 +1,66 @@
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 991.98px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .btn-sidebar-toggle {
+        display: block;
+    }
+
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1035;
+    }
+
+    .sidebar-overlay.show {
+        display: block;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .page-content {
+        padding: 16px;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-toolbar {
+        flex-direction: column;
+    }
+
+    .filter-toolbar .form-group {
+        min-width: 100%;
+    }
+
+    .stat-card-value {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .login-card {
+        padding: 32px 20px;
+    }
+
+    .topbar {
+        padding: 10px 16px;
+    }
+}
+

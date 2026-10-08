@@ -1,0 +1,92 @@
+/* Inventory Management System - Design System & Custom Styles */
+/* Industrial palette: charcoal + olive green + off-white */
+/* Typography: Inter (body) + IBM Plex Sans (headings) */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ========================================
+   Design Tokens (Light Mode)
+   ======================================== */
+:root {
+    --color-primary: #334155;
+    --color-primary-hover: #1E293B;
+    --color-accent: #059669;
+    --color-accent-hover: #047857;
+    --color-accent-light: rgba(5, 150, 105, 0.1);
+    --color-bg: #F8FAFC;
+    --color-card: #FFFFFF;
+    --color-text: #0F172A;
+    --color-text-secondary: #475569;
+    --color-muted: #64748B;
+    --color-border: #E2E8F0;
+    --color-border-hover: #CBD5E1;
+    --color-destructive: #DC2626;
+    --color-destructive-hover: #B91C1C;
+    --color-destructive-light: rgba(220, 38, 38, 0.1);
+    --color-warning: #D97706;
+    --color-warning-light: rgba(217, 119, 6, 0.1);
+    --color-info: #0284C7;
+    --color-info-light: rgba(2, 132, 199, 0.1);
+    --color-success: #059669;
+    --color-success-light: rgba(5, 150, 105, 0.1);
+
+    --color-sidebar-bg: #1E293B;
+    --color-sidebar-text: #CBD5E1;
+    --color-sidebar-active: rgba(5, 150, 105, 0.1);
+    --color-sidebar-hover: rgba(255, 255, 255, 0.08);
+
+    --color-accent-gradient: linear-gradient(135deg, #059669, #0D9488);
+    --color-accent-gradient-hover: linear-gradient(135deg, #047857, #0F766E);
+
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    --font-heading: 'IBM Plex Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* ========================================
+   Dark Mode Tokens
+   ======================================== */
+[data-theme="dark"] {
+    --color-primary: #94A3B8;
+    --color-primary-hover: #CBD5E1;
+    --color-accent: #10B981;
+    --color-accent-hover: #34D399;
+    --color-accent-light: rgba(16, 185, 129, 0.15);
+    --color-bg: #020617;
+    --color-card: #0F172A;
+    --color-text: #F8FAFC;
+    --color-text-secondary: #CBD5E1;
+    --color-muted: #94A3B8;
+    --color-border: #1E293B;
+    --color-border-hover: #334155;
+    --color-destructive: #EF4444;
+    --color-destructive-hover: #F87171;
+    --color-destructive-light: rgba(239, 68, 68, 0.15);
+    --color-warning: #F59E0B;
+    --color-warning-light: rgba(245, 158, 11, 0.15);
+    --color-info: #38BDF8;
+    --color-info-light: rgba(56, 189, 248, 0.15);
+    --color-success: #10B981;
+    --color-success-light: rgba(16, 185, 129, 0.15);
+
+    --color-sidebar-bg: #000000;
+    --color-sidebar-text: #94A3B8;
+
+    --color-accent-gradient: linear-gradient(135deg, #059669, #10B981);
+    --color-accent-gradient-hover: linear-gradient(135deg, #10B981, #34D399);
+
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.5);
+}
+
